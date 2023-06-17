@@ -6,12 +6,12 @@
   "author": "AlbanCrepel <alban.crepel@gmail.com>",
   "license": "GPL-3.0-only",
   "bin": {
-    "compiiile": "bin/cli.js"
+    "compiiile": "bin/cli.ts"
   },
   "scripts": {
-    "dev": "node ./bin/cli.js dev",
-    "build": "node ./bin/cli.js build",
-    "preview": "node ./bin/cli.js preview"
+    "dev": "tsc && node ./bin/cli.ts dev",
+    "build": "tsc && node ./bin/cli.ts build",
+    "preview": "tsc && node ./bin/cli.ts preview"
   },
   "repository": {
     "type": "git",
@@ -32,6 +32,7 @@
     "reveal.js": "^4.3.0",
     "sass": "^1.49.9",
     "slugify": "^1.6.5",
+    "tslib": "^2.5.3",
     "uuid": "^8.3.2",
     "vite": "^4.0.3",
     "vue": "^3.2.45",
@@ -55,5 +56,9 @@
       "type": "ko-fi",
       "url": "https://ko-fi.com/alban_crepel"
     }
-  ]
+  ],
+  "devDependencies": {
+    "@types/node": "^20.3.0",
+    "typescript": "^5.1.3"
+  }
 }
